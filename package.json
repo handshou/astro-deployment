@@ -6,13 +6,16 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"preview": "astro preview",
+		"preview": "wrangler pages dev ./dist",
 		"astro": "astro"
 	},
 	"dependencies": {
-		"astro": "^2.0.14",
 		"@astrojs/mdx": "^0.17.0",
 		"@astrojs/rss": "^2.1.1",
-		"@astrojs/sitemap": "^1.0.1"
+		"@astrojs/sitemap": "^1.0.1",
+		"astro": "^2.0.14"
+	},
+	"devDependencies": {
+		"wrangler": "^2.10.0"
 	}
 }
