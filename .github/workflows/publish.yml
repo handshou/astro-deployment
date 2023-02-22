@@ -9,9 +9,9 @@ jobs:
       - uses: withastro/action@v0
         name: Install, build, and upload your site output
       - uses: actions/upload-artifact@master
-          with:
-            name: dist-artifact
-            path: dist
+        with:
+          name: dist-artifact
+          path: dist
 
   publish:
     needs: build
