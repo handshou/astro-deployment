@@ -19,8 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout
-      - run: |
-	        cd ..
+      - run:  cd ..
 	      name: Go up one directory
 
       - name: Publish to Cloudflare Pages
