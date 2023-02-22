@@ -19,11 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout  
-        with:
-          working-directory: dist/test
 
       - run: cd ${{ inputs.working-directory }}
         name: Change to working directory
+        with:
+          working-directory: /home/runner/work
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
