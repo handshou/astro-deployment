@@ -8,6 +8,10 @@ jobs:
         name: Checkout your repository using git
       - uses: withastro/action@v0
         name: Install, build, and upload your site output
+      - uses: actions/upload-artifact@master
+          with:
+            name: dist-artifact
+            path: dist
 
   publish:
     needs: build
@@ -20,8 +24,10 @@ jobs:
       - uses: actions/checkout@v3
         name: Checkout  
 
-      - run: cd ..
-        name: Change to working directory
+      - uses: actions/download-artifact@master
+        with:
+          name: dist-artifact
+          path: dist
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
