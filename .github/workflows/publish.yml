@@ -22,7 +22,8 @@ jobs:
 
       # Run a build step here if your project requires
       # * Built above in jobs: build
-      - run: cd ..
+      - run: |
+	  cd ..
 	name: Go up one directory
 
       - name: Publish to Cloudflare Pages
