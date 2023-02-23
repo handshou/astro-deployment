@@ -12,7 +12,7 @@ jobs:
           token: ${{ secrets.CONTENT }}
           path: ./src/content
       - run: |
-          find ./src/content/blog -type f -name "*.md" -exec sed -i.bak -nf formatfrontmatter.sed {} \;
+          find ./src/content/blog/ -type f -name "*.md" -exec sed -i.bak -nf formatfrontmatter.sed {} \;
 
       - uses: withastro/action@v0
         name: Install, build, and upload your site output
