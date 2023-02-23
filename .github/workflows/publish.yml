@@ -10,7 +10,7 @@ jobs:
         with:
           repository: handshou/content
           token: ${{ secrets.CONTENT }}
-          path: ./content
+          path: ./src/content
 
       - uses: withastro/action@v0
         name: Install, build, and upload your site output
