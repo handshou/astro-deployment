@@ -13,6 +13,7 @@ jobs:
           path: ./src/content
       - run: |
           find ./src/content/blog/ -type f -name "*.md*" -exec sed -i.bak -nf formatfrontmatter.sed {} \;
+          cat ./src/content/blog/*.md
 
       - uses: withastro/action@v0
         name: Install, build, and upload your site output
