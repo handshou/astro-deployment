@@ -8,7 +8,7 @@ jobs:
         name: Checkout your repository using git
 	
       - uses: actions/checkout@v3
-	      name: Checkout content
+	      name: Checkout your repository using git
         with:
           repository: content
           working-directory: ./content
