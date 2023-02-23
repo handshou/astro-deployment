@@ -9,6 +9,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: handshou/content
+          token: ${{ secrets.CONTENT }}
           path: ./content
 
       - uses: withastro/action@v0
