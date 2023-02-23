@@ -6,6 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout your repository using git
+	
+      - uses: actions/checkout@v3
+	name: Checkout content
+	with:
+	  repository: content
+	  working-directory: ./content
+
       - uses: withastro/action@v0
         name: Install, build, and upload your site output
       - uses: actions/upload-artifact@master
@@ -21,9 +28,6 @@ jobs:
       deployments: write
     name: Publish to Cloudflare Pages
     steps:
-      - uses: actions/checkout@v3
-        name: Checkout  
-
       - uses: actions/download-artifact@master
         with:
           name: dist-artifact
