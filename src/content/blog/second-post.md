@@ -1,3 +1,5 @@
+# 2
+
 ---
 title: "Second post"
 description: "Lorem ipsum dolor sit amet"
